@@ -1,1 +1,30 @@
-<p>Hello world, again!</p>
+<p>Choose your colors.</p>
+
+<p id="stripe-color-display">Chosen color.</p>
+<div id="window">
+	<div id="window-bar" class="main-gradient">
+		<div id="window-bar-left">/bin/bash</div>
+		<div id="window-bar-right">x x x</div>
+	</div>
+	<div id="window-stripe" class="accent-color"></div>
+	<div id="window-content"></div>
+</div>
+
+<form method="get" action="/sanguine/download">
+	<input id="accent-color-input" type="color" value="#941919"/>
+	<input id="main-gradient-input" type="color" value="#363636"/>
+	<input id="submit" type="submit" value="Download"/>
+</form>
+
+<script>
+	function bindColor(fromInput, toElement, property) {
+		var colorInput = $(fromInput);
+		$(toElement).css(property, colorInput.val());
+
+		colorInput.change(function() {
+				$(toElement).css(property, colorInput.val());
+		});
+	}
+
+bindColor('#accent-color-input', '.accent-color', 'background-color');
+</script>
