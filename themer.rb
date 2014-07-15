@@ -7,6 +7,7 @@ class SanguineThemer < Sinatra::Base
 	register Sinatra::AssetPack
 	assets do
 		serve '/css', from: 'app/css'
+		serve '/js', from: 'app/js'
 		serve '/images', from: 'app/images'
 
 		css :application, '/css/application.css', [
@@ -14,7 +15,13 @@ class SanguineThemer < Sinatra::Base
 			'/css/sanguine.css'
 		]
 
+		js :application, '/js/application.css', [
+			'/js/tinycolor.js',
+			'/js/sanguine.js'
+		]
+
 		css_compression :sass
+		js_compression :jsmin
 	end
 
 	get '/sanguine' do

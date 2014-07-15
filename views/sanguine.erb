@@ -1,8 +1,10 @@
-<h1>Sanguine theme generator</h1>
+<h1>Sanguine</h1>
+<p>An Openbox theme generator for the <a href="https://github.com/konradstrack/sanguine">Sanguine</a>
+theme.</p>
 
 <div id="showcase">
-	<div id="window">
-		<div id="window-bar" class="main-gradient">
+	<div id="window" class="base-darker">
+		<div id="window-bar" class="lighter-gradient">
 			<div id="window-bar-left">/bin/bash</div>
 			<div id="window-bar-right">x x x</div>
 		</div>
@@ -10,9 +12,9 @@
 		<div id="window-content"></div>
 	</div>
 
-	<div id="desktop-switcher">
-		<div id="desktop-switcher-content">
-			<div id="desktop-switcher-desktops">
+	<div id="desktop-switcher" class="base-darker">
+		<div id="desktop-switcher-content" class="base-gradient">
+			<div id="desktop-switcher-desktops" class="base-darker">
 				<div class="desktop"></div>
 				<div class="desktop"></div>
 				<div class="desktop selected accent-color"></div>
@@ -22,8 +24,8 @@
 		</div>
 	</div>
 
-	<div id="openbox-menu">
-		<div class="title">Applications</div>
+	<div id="openbox-menu" class="base-gradient">
+		<div class="title base-lighter">Applications</div>
 		<div class="entry">Accessories</div>
 		<div class="entry">Editors</div>
 		<div class="entry">Graphics</div>
@@ -33,9 +35,9 @@
 		<div class="entry">Terminals</div>
 		<div class="entry">File Managers</div>
 
-		<div class="title">System</div>
+		<div class="title base-lighter">System</div>
 		<div class="entry">System</div>
-		<hr />
+		<hr class="base-lighter" />
 		<div class="entry">Log Out</div>
 
 	</div>
@@ -44,20 +46,14 @@
 <div id="controls">
 	<form method="get" action="/sanguine/download">
 		<input id="accent-color-input" type="color" value="#941919"/>
-		<input id="main-gradient-input" type="color" value="#363636"/>
+		<input id="gradient-color-input" type="color" value="#232323"/>
 		<input id="submit" type="submit" value="Download"/>
 	</form>
 </div>
 
 <script>
-	function bindColor(fromInput, toElement, property) {
-		var colorInput = $(fromInput);
-		$(toElement).css(property, colorInput.val());
-
-		colorInput.change(function() {
-				$(toElement).css(property, colorInput.val());
-		});
-	}
-
-bindColor('#accent-color-input', '.accent-color', 'background-color');
+	bindColor('#accent-color-input', '.accent-color', 'background-color');
+	bindLighterColor('#gradient-color-input', '.base-lighter', 'background-color');
+	bindDarkerColor('#gradient-color-input', '.base-darker', 'background-color');
+	bindGradient('#gradient-color-input', '.base-gradient', '.lighter-gradient');
 </script>

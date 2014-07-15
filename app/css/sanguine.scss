@@ -65,18 +65,25 @@ div#desktop-switcher-content {
 
 div#desktop-switcher-desktops {
 	background-color: $border-color;
-	height: 20px;
+	height: 24px;
+	width: 90px;
 	position: absolute;
 	left: 8px;
-	top: 13px;
+	top: 12px;
 }
 
 div#desktop-switcher-desktops .desktop {
 	width: 20px;
 	height: 20px;
-	display: inline-block;
+	position: absolute;
+	top: 2px;
 	background-color: #d0d0d0;
 }
+
+div#desktop-switcher-desktops .desktop:nth-child(1) { left: 2px; }
+div#desktop-switcher-desktops .desktop:nth-child(2) { left: 24px; }
+div#desktop-switcher-desktops .desktop:nth-child(3) { left: 46px; }
+div#desktop-switcher-desktops .desktop:nth-child(4) { left: 68px; }
 
 div#desktop-name {
 	color: #f8f8f8;
@@ -84,9 +91,9 @@ div#desktop-name {
 	width: 60px;
 	height: 20px;
 	position: absolute;
-	left: 112px;
-	top: 13px;
-	line-height: 20px;
+	left: 108px;
+	top: 12px;
+	line-height: 24px;
 }
 
 /* menu */

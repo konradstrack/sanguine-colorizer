@@ -1,5 +1,8 @@
+$background-color: #27201d;
+$link-color: #FF4834;
+
 body {
-	background-color: #27201d;
+	background-color: $background-color;
 	color: white;
 	font-family: 'Roboto', sans-serif;
 }
@@ -11,4 +14,12 @@ div#body-content {
 
 h1 {
 	font-family: 'Exo 2', sans-serif;
+}
+
+a {
+	color: $link-color;
+}
+
+a:hover {
+	color: lighten($link-color, 30%);
 }
