@@ -1,4 +1,4 @@
-<p>Choose your colors.</p>
+<h1>Sanguine theme generator</h1>
 
 <div id="showcase">
 	<div id="window">
@@ -21,13 +21,33 @@
 			<div id="desktop-name">desktop 3</div>
 		</div>
 	</div>
+
+	<div id="openbox-menu">
+		<div class="title">Applications</div>
+		<div class="entry">Accessories</div>
+		<div class="entry">Editors</div>
+		<div class="entry">Graphics</div>
+		<div class="entry">Internet</div>
+		<div class="entry">Office</div>
+		<div class="entry selected accent-color">Multimedia</div>
+		<div class="entry">Terminals</div>
+		<div class="entry">File Managers</div>
+
+		<div class="title">System</div>
+		<div class="entry">System</div>
+		<hr />
+		<div class="entry">Log Out</div>
+
+	</div>
 </div>
 
-<form method="get" action="/sanguine/download">
-	<input id="accent-color-input" type="color" value="#941919"/>
-	<input id="main-gradient-input" type="color" value="#363636"/>
-	<input id="submit" type="submit" value="Download"/>
-</form>
+<div id="controls">
+	<form method="get" action="/sanguine/download">
+		<input id="accent-color-input" type="color" value="#941919"/>
+		<input id="main-gradient-input" type="color" value="#363636"/>
+		<input id="submit" type="submit" value="Download"/>
+	</form>
+</div>
 
 <script>
 	function bindColor(fromInput, toElement, property) {

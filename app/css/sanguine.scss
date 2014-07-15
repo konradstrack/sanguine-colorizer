@@ -3,6 +3,10 @@ $border-color: #232323;
 div#showcase {
 	position: relative;
 	font-family: sans-serif;
+	width: 620px;
+	height: 340px;
+	background: url('/images/showcase-bg.png') #534c49;
+	box-shadow: 0 0 8px black inset;
 }
 
 /* window */
@@ -12,6 +16,9 @@ div#window {
 	height: 240px;
 	box-shadow: 0 0 12px black;
 	padding: 2px;
+	position: absolute;
+	top: 40px;
+	left: 25px;
 }
 
 div#window-bar {
@@ -42,8 +49,8 @@ div#window-content {
 div#desktop-switcher {
 	background-color: $border-color;
 	position: absolute;
-	left: 250px;
-	top: 80px;
+	left: 270px;
+	top: 140px;
 	width: 180px;
 	height: 50px;
 	box-shadow: 0 0 12px black;
@@ -80,4 +87,48 @@ div#desktop-name {
 	left: 112px;
 	top: 13px;
 	line-height: 20px;
+}
+
+/* menu */
+div#openbox-menu {
+	background: linear-gradient(to bottom, #232323 0%, #181818 100%);
+	box-shadow: 0 0 12px black;
+	width: 120px;
+	position: absolute;
+	top: 40px;
+	left: 470px;
+}
+
+div#openbox-menu div.title, div#openbox-menu div.entry {
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 1px 3px;
+}
+
+div#openbox-menu div.title {
+	background-color: #303030;
+	color: #fff;
+	text-align: center;
+}
+
+div#openbox-menu div.entry {
+	color: #c4c4c4;
+}
+
+div#openbox-menu div.selected {
+	color: #fff;
+}
+
+div#openbox-menu hr {
+	border: 0;
+	height: 1px;;
+	margin: 2px;
+	background-color: #4e4e4e;
+}
+
+/* controls */
+
+div#controls {
+	position: relative;
 }

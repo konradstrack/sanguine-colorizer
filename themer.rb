@@ -7,13 +7,14 @@ class SanguineThemer < Sinatra::Base
 	register Sinatra::AssetPack
 	assets do
 		serve '/css', from: 'app/css'
+		serve '/images', from: 'app/images'
 
 		css :application, '/css/application.css', [
 			'/css/layout.css',
 			'/css/sanguine.css'
 		]
 
-#		css_compression :sass
+		css_compression :sass
 	end
 
 	get '/sanguine' do
