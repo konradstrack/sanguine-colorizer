@@ -45,11 +45,25 @@ theme.</p>
 
 <div id="controls">
 	<form method="get" action="/sanguine/download">
-		<input id="accent-color-input" type="color" value="#941919"/>
+		<h2>#1. Select your colors</h2>
+		<label for="gradient-color-input">The main color:</label>
 		<input id="gradient-color-input" type="color" value="#232323"/>
+
+		<label for"accent-color-input">The secondary color:</label>
+		<input id="accent-color-input" type="color" value="#941919"/>
+
+		<h2>#2. Download the theme</h2>
 		<input id="submit" type="submit" value="Download"/>
 	</form>
+
+	<h2>#3. Install it</h2>
+	<p>Unpack the theme to the <code>~/.themes</code> directory. Set up your <code>xcompmgr</code> or <code>compton</code> to display shadows.</p>
+
+	<h2>#4. Live happily ever after</h2>
+	<p>However, please note that the installed theme may look slightly different than the HTML version on the left.</p>
 </div>
+
+<div class="clear"></div>
 
 <script>
 	bindColor('#accent-color-input', '.accent-color', 'background-color');

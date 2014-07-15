@@ -3,7 +3,7 @@ $link-color: #FF4834;
 
 body {
 	background-color: $background-color;
-	color: white;
+	color: #ddd;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -12,8 +12,16 @@ div#body-content {
 	margin: auto;
 }
 
-h1 {
+h1, h2, h3 {
 	font-family: 'Exo 2', sans-serif;
+}
+
+h2:first-child {
+	margin-top: 0;
+}
+
+h2 {
+	color: lighten($link-color, 25%);
 }
 
 a {
@@ -22,4 +30,15 @@ a {
 
 a:hover {
 	color: lighten($link-color, 30%);
+}
+
+.clear {
+	clear: both;
+}
+
+footer {
+	font-size: 0.7em;
+	text-align: right;
+	width: 980px;
+	margin: 6em auto;
 }

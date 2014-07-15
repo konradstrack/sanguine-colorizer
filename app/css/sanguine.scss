@@ -7,6 +7,7 @@ div#showcase {
 	height: 340px;
 	background: url('/images/showcase-bg.png') #534c49;
 	box-shadow: 0 0 8px black inset;
+	float: left;
 }
 
 /* window */
@@ -137,5 +138,27 @@ div#openbox-menu hr {
 /* controls */
 
 div#controls {
-	position: relative;
+	width: 300px;
+	float: right;
+	text-align: right;
 }
+
+label {
+	width: 70%;
+	text-align: right;
+	display: inline-block;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+input[type=submit] {
+	width: 50%;
+	text-align: center;
+	margin-left: 50%;
+	padding: 0.5em;
+}
+
+div#controls p {
+	font-size: 0.9em;
+}
+
