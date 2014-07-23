@@ -31,7 +31,7 @@ theme.</p>
 		<div class="entry">Graphics</div>
 		<div class="entry">Internet</div>
 		<div class="entry">Office</div>
-		<div class="entry selected accent-color">Multimedia</div>
+		<div class="entry selected accent-darker">Multimedia</div>
 		<div class="entry">Terminals</div>
 		<div class="entry">File Managers</div>
 
@@ -49,8 +49,8 @@ theme.</p>
 		<label for="gradient-color-input">The main color:</label>
 		<input id="gradient-color-input" name="base" type="color" value="#232323"/>
 
-		<label for"accent-color-input" name="accent">The secondary color:</label>
-		<input id="accent-color-input" type="color" value="#941919"/>
+		<label for"accent-color-input">The secondary color:</label>
+		<input id="accent-color-input" name="accent" type="color" value="#941919"/>
 
 		<h2>#2. Download the theme</h2>
 		<input id="submit" type="submit" value="Download"/>
@@ -66,8 +66,9 @@ theme.</p>
 <div class="clear"></div>
 
 <script>
-	bindColor('#accent-color-input', '.accent-color', 'background-color');
-	bindLighterColor('#gradient-color-input', '.base-lighter', 'background-color');
-	bindDarkerColor('#gradient-color-input', '.base-darker', 'background-color');
+	bindColor('#accent-color-input', '.accent-color', 'background-color', 0);
+	bindColor('#accent-color-input', '.accent-darker', 'background-color', -0x19);
+	bindColor('#gradient-color-input', '.base-lighter', 'background-color', 0x0d);
+	bindColor('#gradient-color-input', '.base-darker', 'background-color', -0x0B);
 	bindGradient('#gradient-color-input', '.base-gradient', '.lighter-gradient');
 </script>

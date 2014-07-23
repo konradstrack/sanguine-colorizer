@@ -3,73 +3,73 @@
 # This theme is derived from the Onyx theme by Dana Jansens.
 
 
-border.color: #232323
+border.color: <%= active_border_color %>
 border.width: 2
-menu.border.color: #650305
+menu.border.color: <%= active_border_color %>
 menu.border.width: 0
 menu.items.active.bg: Solid Flat
-menu.items.active.bg.color: <%= accent_color %>
+menu.items.active.bg.color: <%= darker_accent_color %>
 menu.items.active.text.color: #F8F8F8
 menu.items.bg: Gradient Vertical Flat
-menu.items.bg.color: #232323
-menu.items.bg.colorTo: #181818
+menu.items.bg.color: <%= darker_g1_color %>
+menu.items.bg.colorTo: <%= darker_g2_color %>
 menu.items.disabled.text.color: #606060
 menu.items.font: shadow=y:shadowtint=30
 menu.items.text.color: #C4C4C4
 menu.overlap: 0
 menu.overlap.x: -1
 menu.overlap.y: 0
-menu.separator.color: <%= lighter_accent_color %>
+menu.separator.color: <%= menu_separator_color %>
 menu.separator.padding.height: 3
 menu.separator.padding.width: 2
 menu.title.bg: Solid Flat
-menu.title.bg.color: #303030
+menu.title.bg.color: <%= menu_title_color %>
 menu.title.text.color: #FFFFFF
 menu.title.text.justify: Center
 osd.bg: Gradient Vertical Flat
-osd.bg.color: #232323
-osd.bg.colorTo: #181818
+osd.bg.color: <%= darker_g1_color %>
+osd.bg.colorTo: <%= darker_g2_color %>
 osd.border.width: 2
 osd.hilight.bg: Solid Flat
-osd.hilight.bg.color: #941919
+osd.hilight.bg.color: <%= accent_color %>
 osd.unhilight.bg: Solid Flat
 osd.unhilight.bg.color: #D0D0D0
 padding.height: 2
 padding.width: 2
-window.active.border.color: #181818
+window.active.border.color: <%= active_border_color %>
 window.active.button.disabled.bg: parentrelative
 window.active.button.disabled.image.color: #707070
 window.active.button.hover.bg: Solid Flat
-window.active.button.hover.bg.color: #941919
+window.active.button.hover.bg.color: <%= accent_color %>
 window.active.button.hover.image.color: #FFFFFF
 window.active.button.pressed.bg: parentrelative
 window.active.button.toggled.hover.bg: Solid Flat
-window.active.button.toggled.hover.bg.color: #941919
+window.active.button.toggled.hover.bg.color: <%= accent_color %>
 window.active.button.toggled.hover.image.color: #FFFFFF
 window.active.button.toggled.pressed.bg: Solid Flat
-window.active.button.toggled.pressed.bg.color: #780002
+window.active.button.toggled.pressed.bg.color: <%= darker_accent_color %>
 window.active.button.unpressed.bg: parentrelative
 window.active.button.unpressed.image.color: #e0e0e0
-window.active.client.color: #181818
+window.active.client.color: <%= darker_g2_color %>
 window.active.label.bg: parentrelative
 window.active.label.text.color: #f8f8f8
 window.active.title.bg: Gradient Vertical Flat
-window.active.title.bg.color: #363636
-window.active.title.bg.colorTo: #313131
-window.active.title.separator.color: #941919
+window.active.title.bg.color: <%= lighter_g1_color %>
+window.active.title.bg.colorTo: <%= lighter_g2_color %>
+window.active.title.separator.color: <%= accent_color %>
 window.client.padding.height: 0
 window.client.padding.width: 0
 window.handle.width: 0
-window.inactive.border.color: #232323
+window.inactive.border.color: <%= inactive_border_color %>
 window.inactive.button.disabled.bg: parentrelative
 window.inactive.button.disabled.image.color: #A0A0A0
 window.inactive.button.hover.bg: Solid Flat
-window.inactive.button.hover.bg.color: #941919
+window.inactive.button.hover.bg.color: <%= accent_color %>
 window.inactive.button.hover.image.color: #C0C0C0
 window.inactive.button.pressed.bg: Solid Flat
-window.inactive.button.pressed.bg.color: #780002
+window.inactive.button.pressed.bg.color: <%= darker_accent_color %>
 window.inactive.button.toggled.hover.bg: Solid Flat
-window.inactive.button.toggled.hover.bg.color: #941919
+window.inactive.button.toggled.hover.bg.color: <%= accent_color %>
 window.inactive.button.toggled.hover.image.color: #C0C0C0
 window.inactive.button.toggled.image.color: #A0A0A0
 window.inactive.button.toggled.unpressed.bg: ParentRelative Flat
@@ -79,7 +79,7 @@ window.inactive.client.color: #CACAB6
 window.inactive.label.bg: parentrelative
 window.inactive.label.text.color: #A0A0A0
 window.inactive.title.bg: Gradient Vertical Flat
-window.inactive.title.bg.color: #232323
-window.inactive.title.bg.colorTo: #181818
-window.inactive.title.separator.color: #941919
+window.inactive.title.bg.color: <%= darker_g1_color %>
+window.inactive.title.bg.colorTo: <%= darker_g2_color %>
+window.inactive.title.separator.color: <%= accent_color %>
 window.label.text.justify: Left

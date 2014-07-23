@@ -38,6 +38,11 @@ class SanguineThemer < Sinatra::Base
 	get '/sanguine/download' do
 		prefix = 'data/themes'
 		theme_dir = 'Sanguine/openbox-3'
+		
+		colors = {
+			base_color: params[:base],
+			accent_color: params[:accent]
+		}
 
 		t = Tempfile.new ['sanguine', '.zip'], "#{settings.root}/tmp"
 		Zip::File.open(t.path, Zip::File::CREATE) do |z|
@@ -48,7 +53,7 @@ class SanguineThemer < Sinatra::Base
 			end
 
 			z.get_output_stream(File.join(theme_dir, 'themerc')) do |trc|
-				trc.write Sanguine.build_themerc(File.join(settings.root, prefix, theme_dir, 'themerc.erb'))
+				trc.write Sanguine.build_themerc(File.join(settings.root, prefix, theme_dir, 'themerc.erb'), colors)
 			end
 		end
 

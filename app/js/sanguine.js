@@ -1,33 +1,21 @@
-function bindColor(fromInput, toElement, property) {
-	var colorInput = $(fromInput);
-	$(toElement).css(property, colorInput.val());
+function addToColor(color, component) {
+	var rgb = color.toRgb();
+	rgb.r += component;
+	rgb.g += component;
+	rgb.b += component;
 
-	colorInput.change(function() {
-		$(toElement).css(property, colorInput.val());
-	});
+	return tinycolor(rgb);
 }
 
-function bindLighterColor(fromInput, toElement, property) {
+function bindColor(fromInput, toElement, property, lightenBy) {
 	var colorInput = $(fromInput);
 
-	var lighterColorStr = tinycolor(colorInput.val()).lighten(10).toString();
-	$(toElement).css(property, lighterColorStr);
+	var colorStr = addToColor(tinycolor(colorInput.val()), lightenBy).toString();
+	$(toElement).css(property, colorStr);
 
 	colorInput.change(function() {
-		var lighterColorStr = tinycolor(colorInput.val()).lighten(10).toString();
-		$(toElement).css(property, lighterColorStr);
-	});
-}
-
-function bindDarkerColor(fromInput, toElement, property) {
-	var colorInput = $(fromInput);
-
-	var lighterColorStr = tinycolor(colorInput.val()).darken(16).toString();
-	$(toElement).css(property, lighterColorStr);
-
-	colorInput.change(function() {
-		var lighterColorStr = tinycolor(colorInput.val()).darken(16).toString();
-		$(toElement).css(property, lighterColorStr);
+		var colorStr = addToColor(tinycolor(colorInput.val()), lightenBy).toString();
+		$(toElement).css(property, colorStr);
 	});
 }
 
@@ -39,12 +27,14 @@ function applyGradients(baseColor, toElement, toLighterElement) {
 	var firstColor = tinycolor(baseColor);
 
 	var firstColorStr = baseColor;
-	var secondColorStr = tinycolor(baseColor).darken(2).toString();
+	var secondColorStr = addToColor(firstColor, -0x0B).toString();
 
 	$(toElement).css('background', constructLinearGradient(firstColorStr, secondColorStr));
 
-	var lighterFirstColorStr = tinycolor(baseColor).lighten(10).toString();
-	var lighterSecondColorStr = firstColor.lighten(2).toString();
+	var lighterFirstColor = addToColor(firstColor, 0x13);
+
+	var lighterFirstColorStr = lighterFirstColor.toString();
+	var lighterSecondColorStr = addToColor(lighterFirstColor, 0x0E).toString();
 
 	$(toLighterElement).css('background', constructLinearGradient(lighterFirstColorStr, lighterSecondColorStr));
 }
