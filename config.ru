@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './themer.rb'
-run SanguineThemer
+require './colorizer.rb'
+run SanguineColorizer

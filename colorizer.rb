@@ -4,7 +4,7 @@ require 'zip'
 
 require_relative 'theme_builder'
 
-class SanguineThemer < Sinatra::Base
+class SanguineColorizer < Sinatra::Base
 	set :root, File.dirname(__FILE__)
 
 	register Sinatra::AssetPack
