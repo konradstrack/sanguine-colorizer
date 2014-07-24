@@ -33,7 +33,16 @@ div#window-bar {
 }
 
 div#window-bar-left, div#window-bar-right {
-	display: inline;
+	display: inline-block;
+}
+
+div#window-bar-right {
+	position: absolute;
+	right: 6px;
+}
+
+div#window-bar-right img {
+	margin: 1px;
 }
 
 div#window-stripe {
