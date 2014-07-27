@@ -7,6 +7,9 @@ require_relative 'theme_builder'
 class SanguineColorizer < Sinatra::Base
 	set :root, File.dirname(__FILE__)
 
+	# Google Analytics key
+	set :ga_key, ENV['GA_KEY']
+
 	register Sinatra::AssetPack
 	assets do
 		serve '/css', from: 'app/css'
