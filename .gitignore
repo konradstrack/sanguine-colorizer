@@ -2,3 +2,4 @@
 .ruby-*
 .sass-cache
 Gemfile.lock
+.env
